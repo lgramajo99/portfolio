@@ -1,14 +1,14 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-
 import Bar from "./components/Bar"
+// import AboutMe from "./pages/AboutMe"
+// import TabBar from "./components/TabBar"
 
 function App() {
   return (
     <div >
-      <Bar/>
-      <h1 className='text-3xl font-bold'>Portfolio</h1>
+      <Bar />
+      <section >
+
+      </section>
     </div>
   )
 }

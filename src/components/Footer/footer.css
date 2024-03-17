@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.footer a {}
+
+.footer hr {
+    height: 25px;
+    margin: 5px 0;
+
+}

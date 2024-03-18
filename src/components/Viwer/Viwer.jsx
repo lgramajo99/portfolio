@@ -1,13 +1,13 @@
 import './viwer.css'
-import Footer from "../Footer/Footer";
-import Paginator from "../Paginator/Paginator";
-import Sidebar from '../Sidebar/Sidebar';
+import Footer from "../layout/footer/Footer";
+import Sidebar from '../layout/sidebar/Sidebar';
+import Frame from '../layout/frame/Frame';
 
 function Viwer() {
     return (
         <main className="viwer">
             <Sidebar />
-            <Paginator />
+            <Frame />
             <Footer />
         </main>
     )

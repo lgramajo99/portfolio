@@ -1,11 +1,8 @@
-import Viwer from './components/Viwer/Viwer'
+import Viwer from './components/viwer/Viwer'
 
 function App() {
   return (
-    <main>
-      <h1>PORTFOLIO</h1>
-      <Viwer />
-    </main>
+    <Viwer />
   )
 }
 

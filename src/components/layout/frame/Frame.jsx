@@ -1,12 +1,14 @@
 import './frame.css';
-import Paginator from "../../paginator/Paginator";
+import Portal from "../../portal/Portal";
 import Profile from "../../profile/Profile";
+import { Route, Routes } from 'react-router-dom';
+import About from '../../../page/About';
 
 function Frame() {
     return (
         <section className="frame">
             <Profile />
-            <Paginator />
+            <Portal />
         </section>
     )
 }

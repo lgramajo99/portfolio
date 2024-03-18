@@ -1,0 +1,6 @@
+.frame {
+    display: grid;
+    grid-template-columns: 29.9% 69.9%;
+    justify-content: center;
+    width: 75%;
+}

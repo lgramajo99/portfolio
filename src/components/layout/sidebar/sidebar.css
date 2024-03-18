@@ -1,0 +1,8 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+
+    height: 500px;
+    border: 1px red solid;
+}

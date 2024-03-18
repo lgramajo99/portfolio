@@ -7,13 +7,16 @@
 
   background-color: #07070d;
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
+* {
+  margin: 0;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

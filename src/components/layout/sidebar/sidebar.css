@@ -1,8 +1,19 @@
 .navbar {
     display: flex;
     flex-direction: column;
-    gap: 10px 0px;
+    gap: 20px 0px;
+    padding: 0 10px;
+    justify-content: center;
+    height: 100vh;
+    background: #111111;
+}
 
-    height: 500px;
-    border: 1px red solid;
+.navlink {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.icon {
+    width: 22px;
 }

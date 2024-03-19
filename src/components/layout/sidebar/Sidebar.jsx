@@ -6,41 +6,67 @@ function Sidebar() {
 
     return (
         <nav className="navbar">
-            <NavLink to={'/'} className={'navlink'}>
-                <img src={useridcard} alt="" className='icon' />
+            <NavLink exact to={'/'} className={'navlink'}
+                title='Ir al apartado sobre mí'
+                tabIndex={1}
+                aria-label='Sobre mi'>
+                <img src={useridcard} alt="Icono de sobre mi" className='icon' />
                 <span>SOBRE MI</span>
             </NavLink>
 
-            <NavLink to={'experiencia-laboral'} className={'navlink'}>
-                <img src={store} alt="" className='icon' />
+            <NavLink exact to={'experiencia-laboral'} className={'navlink'}
+                title='Ir al apartado experiencia laboral'
+                tabIndex={2}
+                aria-label="Experiencia laboral">
+                <img src={store} alt="Icono de Experiencia laboral" className='icon' />
                 <span>EXPERIENCIA LABORAL</span>
             </NavLink>
 
-            <NavLink to={'formacion-academica'} className={'navlink'}>
-                <img src={graduationcap} alt="" className='icon' />
+            <NavLink exact
+                to={'formacion-academica'} className={'navlink'}
+                title='Ir al apartado estudios'
+                tabIndex={3}
+                aria-label='Estudios'>
+                <img src={graduationcap} alt="Icono de Estudios" className='icon' />
                 <span>ESTUDIOS</span>
             </NavLink>
 
-            <NavLink to={'portfolio'} className={'navlink'}>
-                <img src={bagsuitcase} alt="" className='icon' />
+            <NavLink exact
+                to={'portfolio'} className={'navlink'}
+                title='Ir al apartado portfolio'
+                tabIndex={4}
+                aria-label='Porfolio'>
+                <img src={bagsuitcase} alt="Icono de Portfolio" className='icon' />
                 <span>PORTFOLIO</span>
             </NavLink>
 
-            <NavLink to={'habilidades'} className={'navlink'}>
-                <img src={star} alt="" className='icon' />
+            <NavLink exact
+                to={'habilidades'} className={'navlink'}
+                title='Ir al apartado habilidades'
+                tabIndex={5}
+                aria-label='Habilidades'>
+                <img src={star} alt="Icono de Habilidades" className='icon' />
                 <span>HABILIDADES</span>
             </NavLink>
 
-            <NavLink to={'contactame'} className={'navlink'}>
-                <img src={sendemail} alt="" className='icon' />
+            <NavLink exact
+                to={'contactame'} className={'navlink'}
+                title='Ir al apartado contactarme'
+                tabIndex={6}
+                aria-label='Contactame'>
+                <img src={sendemail} alt="Icono de contactame" className='icon' />
                 <span>CONTACTAME</span>
             </NavLink>
 
-            <NavLink to={'#'} className={'navlink'}>
-                <img src={home} alt="" className='icon' />
+            <NavLink exact
+                to={'login'} className={'navlink'}
+                title='Ir al apartado iniciar sesión'
+                tabIndex={7}
+                aria-label='Iniciar sesión'>
+                <img src={home} alt="Icono de Inicio de sesión" className='icon' />
                 <span>INICIAR SECION</span>
             </NavLink>
-        </nav>
+        </nav >
     )
 }
 

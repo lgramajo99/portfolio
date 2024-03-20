@@ -6,7 +6,7 @@ function Sidebar() {
 
     return (
         <nav className="navbar">
-            <NavLink exact to={'/'} className={'navlink'}
+            <NavLink to={'/'} className={'navlink'}
                 title='Ir al apartado sobre mí'
                 tabIndex={1}
                 aria-label='Sobre mi'>
@@ -14,7 +14,7 @@ function Sidebar() {
                 <span>SOBRE MI</span>
             </NavLink>
 
-            <NavLink exact to={'experiencia-laboral'} className={'navlink'}
+            <NavLink to={'experiencia-laboral'} className={'navlink'}
                 title='Ir al apartado experiencia laboral'
                 tabIndex={2}
                 aria-label="Experiencia laboral">
@@ -22,7 +22,7 @@ function Sidebar() {
                 <span>EXPERIENCIA LABORAL</span>
             </NavLink>
 
-            <NavLink exact
+            <NavLink
                 to={'formacion-academica'} className={'navlink'}
                 title='Ir al apartado estudios'
                 tabIndex={3}
@@ -31,7 +31,7 @@ function Sidebar() {
                 <span>ESTUDIOS</span>
             </NavLink>
 
-            <NavLink exact
+            <NavLink
                 to={'portfolio'} className={'navlink'}
                 title='Ir al apartado portfolio'
                 tabIndex={4}
@@ -40,7 +40,7 @@ function Sidebar() {
                 <span>PORTFOLIO</span>
             </NavLink>
 
-            <NavLink exact
+            <NavLink
                 to={'habilidades'} className={'navlink'}
                 title='Ir al apartado habilidades'
                 tabIndex={5}
@@ -49,7 +49,7 @@ function Sidebar() {
                 <span>HABILIDADES</span>
             </NavLink>
 
-            <NavLink exact
+            <NavLink
                 to={'contactame'} className={'navlink'}
                 title='Ir al apartado contactarme'
                 tabIndex={6}
@@ -58,7 +58,7 @@ function Sidebar() {
                 <span>CONTACTAME</span>
             </NavLink>
 
-            <NavLink exact
+            <NavLink
                 to={'login'} className={'navlink'}
                 title='Ir al apartado iniciar sesión'
                 tabIndex={7}

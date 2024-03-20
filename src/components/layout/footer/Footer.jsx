@@ -17,12 +17,12 @@ function Footer() {
 
             <section className='social'>
                 <hr />
-                <a href="#" rel="noopener noreferrer" title='Ir a dibbble'>
+                <a href="#" rel="noopener noreferrer" target='_blank' title='Ir a dibbble'>
                     <img src={dribbble} className='icon' alt="dribbble" />
                 </a>
 
                 <hr />
-                <a href="https://www.linkedin.com/in/lucianogramajo/" rel="noopener noreferrer" title='Ir a linkedIn'>
+                <a href="https://www.linkedin.com/in/lucianogramajo/" target='_blank' rel="noopener noreferrer" title='Ir a linkedIn'>
                     <img src={linkedin} className='icon' alt="linkedin" />
                 </a>
 

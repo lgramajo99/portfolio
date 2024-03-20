@@ -24,6 +24,7 @@
     background-color: #333333;
     border-radius: 5px;
     transform: scale(1.1);
+    border-bottom: #8A2BE2 2px solid;
 }
 
 .navlink:focus {
@@ -41,4 +42,3 @@
 .navlink svg {
     fill: #000000;
 }
-

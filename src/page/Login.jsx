@@ -13,11 +13,14 @@ function Login() {
         user: '',
         password: '',
     });
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
 
     const handleChange = (event) => {
         const { name, value, checked } = event.target;
-
-
         setFormData({
             ...formData,
             [name]: name === 'remember' ? checked : value,
@@ -42,30 +45,35 @@ function Login() {
     }
 
 
-
     return (
         <main>
             <h2>Iniciar sesión.</h2>
 
             <form className='formulario' onSubmit={handleSubmit} action="#">
-                <label htmlFor="user">Usuario</label>
-                <input className={`intupC ${errors.user ? 'intupC' : ''}`}
-                    onChange={handleChange}
-                    type="text"
-                    name="user"
-                    id="user"
-                    placeholder="Usuario123" />
-                {errors.user && <span className="msjAlert">{errors.user}</span>}
+                <section>
+                    <label htmlFor="user">Usuario</label>
+                    <input className={`intupC ${errors.user ? 'intupC' : ''}`}
+                        onChange={handleChange}
+                        type="text"
+                        name="user"
+                        id="user"
+                        placeholder="Usuario123" />
+                    {errors.user && <span className="msjAlert">{errors.user}</span>}
+                </section>
 
-
-                <label htmlFor="password">Contraseña</label>
-                <input className={`intupC ${errors.password ? 'intupC' : ''}`}
-                    onChange={handleChange}
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="**********" />
-                {errors.password && <span className="msjAlert">{errors.password}</span>}
+                <section>
+                    <label htmlFor="password">Contraseña</label>
+                    <input className={`intupC ${errors.password ? 'intupC' : ''}`}
+                        onChange={handleChange}
+                        type={showPassword ? 'text' : 'password'}
+                        name="password"
+                        id="password"
+                        placeholder="**********" />
+                    <button className='btnShow' type='button' onClick={togglePasswordVisibility}>
+                        {showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+                    </button>
+                    {errors.password && <span className="msjAlert">{errors.password}</span>}
+                </section>
 
                 <section >
                     <input type="checkbox"

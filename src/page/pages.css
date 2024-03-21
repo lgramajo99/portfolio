@@ -46,3 +46,10 @@
     color: red;
     font-size: small;
 }
+
+/* °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° */
+
+.btnShow {
+    display: block;
+    margin-left: auto;
+}

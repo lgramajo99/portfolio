@@ -1,82 +1,130 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { validationsContact } from "../utils/validations";
 
 function ContactMe() {
-    const [alert, setAlert] = useState(true)
+    const [formData, setFormData] = useState({
+        nombre: '',
+        correo: '',
+        asunto: '',
+        texto: '',
+        archivo: null,
+        consentimiento: false,
+    });
+    const [errors, setErrors] = useState({
+        nombre: '',
+        correo: '',
+        asunto: '',
+        texto: '',
+        archivo: '',
+        consentimiento: '',
+    });
+    const [submitting, setSubmitting] = useState(false);
 
-    return (<main>
-        <h2>Contactame.</h2>
-        <form className="formulario" action="#" method="post" >
+    const handleChange = (event) => {
+        const { name, value, checked, files } = event.target;
+        const newValue = name === 'consentimiento' ? checked : name === 'archivo' ? (files.length > 0 ? files[0] : null) : value;
+        setFormData({
+            ...formData,
+            [name]: newValue
+        });
+        setErrors({
+            ...errors,
+            [name]: ''
+        });
+    };
 
-            <label htmlFor="nombre">Nombre | Empresa (requerido)</label>
-            <input className={`intupC ${alert || 'alertInput'}`}
-                type="text"
-                id="nombre"
-                name="nombre"
-                required
-                placeholder="Nombre | Empresa" />
-            <span className="msjAlert"
-                hidden={alert}>
-                Introduce un nombre valido
-            </span>
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setSubmitting(true);
 
-            <label className="labels"
-                htmlFor="correo">
-                Correo electrónico. (requerido)
-            </label>
-            <input className={`intupC ${alert || 'alertInput'}`}
-                type="email"
-                id="correo"
-                name="correo"
-                required
-                placeholder="example@xyz.com" />
-            <span className="msjAlert"
-                hidden={alert}>
-                Debe introducir un correo valido.
-            </span>
+        const validation = validationsContact(formData);
+        if (!validation.valid) {
+            setErrors(validation.errors);
+        } else {
+            console.log(formData);
+            alert('Mensaje enviado.');
+            setFormData({
+                nombre: '',
+                correo: '',
+                asunto: '',
+                texto: '',
+                archivo: null,
+                consentimiento: false,
+            })
+        }
 
-            <label htmlFor="nombre">Asunto (requerido)</label>
-            <input className={`intupC ${alert || 'alertInput'}`}
-                type="text"
-                id="Asunto"
-                name="Asunto"
-                required
-                placeholder="Asunto" />
-            <span className="msjAlert"
-                hidden={alert}>
-                Este campo no debe estar vacio.
-            </span>
+        setSubmitting(false);
+    };
 
-            <label className="labels"
-                htmlFor="texto">
-                Mensaje
-            </label>
-            <textarea className={`intupC ${alert || 'alertInput'}`}
-                id="texto"
-                name="texto"
-                rows="5"
-                cols="20"
-                minLength={5}
-                placeholder="Introduce un texto..." />
-            <input type="file" name="archivo" id="archivo" />
+    const isFormValid = () => {
+        return Object.values(errors).every(error => error === '') && !submitting;
+    };
 
-            <span className="msjAlert" hidden={alert}>
-                Este campo no debe estar vacio, y debe contener mas de 5 caracteres para ser valido o puede enviar un archivo adjunto.
-            </span>
+    return (
+        <main>
+            <h2>Contactame.</h2>
+            <form className="formulario" onSubmit={handleSubmit} action="#" method="post">
+                <label htmlFor="nombre">Nombre | Empresa (requerido)</label>
+                <input className={`intupC ${errors.nombre ? 'alertInput' : ''}`}
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    placeholder="Nombre | Empresa" />
+                {errors.nombre && <span className="msjAlert">{errors.nombre}</span>}
 
-            <div className="consentimiento">
-                <input type="checkbox"
-                    id="consentimiento"
-                    name="consentimiento"
-                    required />
-                <label htmlFor="consentimiento">
-                    Acepto la <a href="politica-privacidad">política de privacidad</a> y doy mi consentimiento para el procesamiento de mis datos personales.
-                </label>
-            </div>
-            <span className="msjAlert" hidden={alert}>Debe aceptar el consentimiento.</span>
+                <label className="labels" htmlFor="correo">Correo electrónico (requerido)</label>
+                <input className={`intupC ${errors.correo ? 'alertInput' : ''}`}
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    value={formData.correo}
+                    onChange={handleChange}
+                    placeholder="example@xyz.com" />
+                {errors.correo && <span className="msjAlert">{errors.correo}</span>}
 
-            <button className="btnCV" type="submit">Enviar</button>
-        </form>
-    </main>)
+                <label htmlFor="asunto">Asunto (requerido)</label>
+                <input className={`intupC ${errors.asunto ? 'alertInput' : ''}`}
+                    type="text"
+                    id="asunto"
+                    name="asunto"
+                    value={formData.asunto}
+                    onChange={handleChange}
+                    placeholder="Asunto" />
+                {errors.asunto && <span className="msjAlert">{errors.asunto}</span>}
+
+                <label className="labels" htmlFor="texto">Mensaje</label>
+                <textarea className={`intupC ${errors.texto ? 'alertInput' : ''}`}
+                    id="texto"
+                    name="texto"
+                    value={formData.texto}
+                    onChange={handleChange}
+                    rows="5"
+                    cols="20"
+                    placeholder="Introduce un texto..."></textarea>
+                {errors.texto && <span className="msjAlert">{errors.texto}</span>}
+
+                <input type="file"
+                    name="archivo"
+                    id="archivo"
+                    onChange={handleChange} />
+                {errors.archivo && <span className="msjAlert">{errors.archivo}</span>}
+
+                <div className="consentimiento">
+                    <input
+                        type="checkbox"
+                        id="consentimiento"
+                        name="consentimiento"
+                        checked={formData.consentimiento}
+                        onChange={handleChange} />
+                    <label htmlFor="consentimiento">Acepto la <a href="politica-privacidad">política de privacidad</a> y doy mi consentimiento para el procesamiento de mis datos personales.</label>
+                </div>
+                {errors.consentimiento && <span className="msjAlert">{errors.consentimiento}</span>}
+                <button className="btnCV" type="submit" disabled={!isFormValid()}>Enviar</button>
+            </form>
+        </main>
+    );
 }
 
 export default ContactMe;

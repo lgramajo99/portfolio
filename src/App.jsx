@@ -12,6 +12,7 @@ import Portfolio from './page/Portfolio';
 import Project from './page/Project';
 import Skills from './page/Skills';
 import WorkExp from './page/WorkExp';
+import Login from './page/Login';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='portfolio' element={<Portfolio />} />
           <Route path='habilidades' element={<Skills />} />
           <Route path='experiencia-laboral' element={<WorkExp />} />
+          <Route path='login' element={<Login />} />
           <Route path='*' element={<Error />} />
         </Route>
         <Route path='*' element={<Error />} />

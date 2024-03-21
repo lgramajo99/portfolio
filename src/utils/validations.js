@@ -15,6 +15,22 @@ export function validationsContact(formData) {
     };
 }
 
+export function validationLogin(formData) {
+    const { user, password } = formData;
+    const errors = {};
+    const validate = { user: 'lucianogramajo00', password: 's$1mpl3' }
+
+    if (!user) errors.user = 'Este campo es obligatorio';
+    if (!password) errors.password = 'Este campo es obligatorio';
+    if (user !== validate.user) errors.user = 'El usuario proporcionado no es compatible.';
+    if (password !== validate.password) errors.password = 'Contraseña incorrecta.'
+
+    return {
+        valid: Object.keys(errors).length === 0,
+        errors
+    };
+}
+
 function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }

@@ -1,0 +1,30 @@
+{
+    "workExperiences": [
+        {
+            "title": "Desarrollador Web (Backend y Frontend) | Proyecto 'Step by Step' | Mayo 2023 - Agosto 2023",
+            "description": "Colaboré en un proyecto de desarrollo web voluntario, donde formé parte de un equipo multidisciplinario. Mi rol principal consistió en liderar el desarrollo del backend utilizando Node.js y SQL/PostgreSQL, además de contribuir al frontend con React.js. Adoptamos la metodología ágil Scrum para gestionar el proyecto de manera efectiva.",
+            "date": "Mayo 2023 - Agosto 2023",
+            "achievements": [
+                "Diseñé y desarrollé la arquitectura del backend utilizando Node.js, implementando endpoints de API RESTful para la comunicación entre el frontend y la base de datos. Utilizamos patrones de diseño y buenas prácticas de desarrollo para garantizar la escalabilidad y el rendimiento del sistema.",
+                "Colaboré estrechamente con otro desarrollador para diseñar la estructura de la base de datos utilizando SQL/PostgreSQL, asegurando la integridad de los datos y optimizando las consultas para mejorar la eficiencia.",
+                "Contribuí al desarrollo del frontend utilizando React.js, implementando componentes reutilizables y utilizando bibliotecas como React Router y React Toolkit para gestionar la navegación y el estado de la aplicación de manera eficiente.",
+                "Integré la autenticación y autorización en la aplicación utilizando Auth0, garantizando la seguridad de los usuarios y el acceso adecuado a los recursos.",
+                "Participé en reuniones diarias de Scrum, ayudando a planificar y priorizar las tareas del equipo, así como a identificar y resolver obstáculos de manera proactiva.",
+                "Mantuve una comunicación clara y constante con el equipo, compartiendo actualizaciones sobre el progreso del desarrollo y colaborando en la resolución de problemas de manera colaborativa."
+            ]
+        },
+        {
+            "title": "Aegis Argentina (Startek) - Tucumán, Argentina",
+            "description": "Asesor telefónico de atención al cliente ",
+            "date": "Octubre 2019 - Octubre 2021",
+            "achievements": [
+                "Reconocido como Asesor Modelo y líder en atención al cliente.",
+                "Administración en facturación y gestión de transacciones financieras.",
+                "Estrategias efectivas de retención de clientes y reducción de bajas.",
+                "Provisión de soporte técnico y solución de problemas.",
+                "Cumplimiento consistente de objetivos de ventas de servicios y productos.",
+                "Contribución a la mejora de procedimientos operativos para aumentar la eficiencia y calidad del servicio."
+            ]
+        }
+    ]
+}

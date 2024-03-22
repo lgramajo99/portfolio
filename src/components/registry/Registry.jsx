@@ -1,3 +1,5 @@
+import './registry.css';
+
 function Registry({ data }) {
     if (!data) {
         return null;
@@ -15,11 +17,11 @@ function Registry({ data }) {
     }
 
     return (
-        <main>
-            <h3>{title}</h3>
-            <p>{date}</p>
-            <p>{description}</p>
-            <h4>Logros y Contribuciones</h4>
+        <main className="main">
+            <p className="date">{date}</p>
+            <h3 className="title">{title}</h3>
+            <p className="description">{description}</p>
+            <p className="achievement">Logros y Contribuciones :</p>
             <ul>
                 {renderAchievements()}
             </ul>

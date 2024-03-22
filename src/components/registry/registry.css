@@ -1,0 +1,28 @@
+.main {
+    margin: 15px auto;
+    font-size: 15px;
+}
+
+.main hr {
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgb(100, 100, 100), transparent);
+}
+
+.title {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.date {
+    text-align: end;
+    font-weight: bold;
+}
+
+.description {}
+
+.achievement {
+    font-weight: bold;
+}

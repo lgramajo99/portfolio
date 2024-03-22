@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Registry from "../components/Registry";
+import Registry from "../components/registry/Registry";
 import work from '../data/work.json';
 import Loader from '../components/common/Loader'
 

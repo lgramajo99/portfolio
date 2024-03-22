@@ -1,0 +1,72 @@
+{
+    "education": [
+        {
+            "institution": "Instituto de Educación Técnica Superior TecLab",
+            "courses": [
+                {
+                    "title": "Técnico Superior en Programación",
+                    "period": "2021 – 2023"
+                }
+            ],
+            "description": "Durante mi tiempo en el Instituto de Educación Técnica Superior TecLab, adquirí conocimientos sólidos en programación, incluyendo conceptos fundamentales y técnicas avanzadas en desarrollo de software."
+        },
+        {
+            "institution": "Instituto ITEP",
+            "courses": [
+                {
+                    "title": "Bachiller con orientación en Economía y Administración",
+                    "period": "2011 - 2016"
+                }
+            ],
+            "description": "Mi educación en el Instituto ITEP me proporcionó una base sólida en economía y administración, lo que me brindó una comprensión integral de los principios comerciales y empresariales."
+        }
+    ],
+    "additional": [
+        {
+            "institution": "Soyhenry.com",
+            "courses": [
+                {
+                    "title": "Desarrollador Web Full Stack",
+                    "period": "12/2022 - 07/2023"
+                }
+            ],
+            "description": "El programa de Desarrollador Web Full Stack en SoyHenry.com me proporcionó una formación exhaustiva en desarrollo web, abarcando tanto el frontend como el backend, y me permitió adquirir habilidades prácticas en la creación de aplicaciones web completas."
+        },
+        {
+            "institution": "Conectaempleo-formacion.fundaciontelefonica.com",
+            "courses": [
+                {
+                    "title": "Programación con JavaScript",
+                    "period": "09/2022"
+                },
+                {
+                    "title": "Gestión de Proyectos con Metodologías Ágiles y Enfoque Lean",
+                    "period": "08/2022"
+                },
+                {
+                    "title": "Networking y Marketing Personal",
+                    "period": "08/2022"
+                },
+                {
+                    "title": "Diseño Web con HTML5 y CSS",
+                    "period": "07/2022"
+                },
+                {
+                    "title": "Habilidades para el Empleo",
+                    "period": "05/2022"
+                }
+            ],
+            "description": "Estos cursos ofrecidos por Conectaempleo de Fundación Telefónica me proporcionaron habilidades adicionales en programación, gestión de proyectos, marketing personal y diseño web, complementando mi formación académica y mi experiencia laboral."
+        },
+        {
+            "institution": "Rolling Code - Rollingcodeschool.com",
+            "courses": [
+                {
+                    "title": "Desarrollador Web Full Stack",
+                    "period": "02/2020 – 12/2020"
+                }
+            ],
+            "description": "El programa de Desarrollador Web Full Stack en Rolling Code me permitió adquirir conocimientos integrales en desarrollo web, cubriendo tanto el frontend como el backend, y me proporcionó experiencia práctica en la creación de aplicaciones web dinámicas y funcionales."
+        }
+    ]
+}

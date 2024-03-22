@@ -1,0 +1,30 @@
+.main {
+    margin: 15px auto;
+    font-size: 15px;
+}
+
+.main hr {
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgb(100, 100, 100), transparent);
+}
+
+.courses {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.degree {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-size: 14px;
+}
+
+.description {
+    margin: 8px 0;
+}
